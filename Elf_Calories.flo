@@ -25,4 +25,4 @@ fn main():
         else:
             cur_sum = +(cur_sum, cur_calories)
 
-    display(max_calories)
+    display("Total Calories: {max_calories}")

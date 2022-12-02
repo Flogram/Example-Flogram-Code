@@ -1,0 +1,83 @@
+# This code is the solution for:
+# https://adventofcode.com/2022/day/2
+
+# On left(their hand):
+# A = Rock
+# B = Paper
+# C = Scissors
+
+# On right(your hand):
+# X = Rock
+# Y = Paper
+# Z = Scissors
+
+# score for each round:
+# 1 if X
+# 2 if Y
+# 3 if Z
+# PLUS
+# 0 if you lost
+# 3 if you tied
+# 6 if you won
+
+import "Base.File"
+
+rock: I32 = 1
+paper: I32 = 2
+scissor: I32 = 3
+
+lose: I32 = 0
+tie: I32 = 3
+win: I32 = 6
+
+mut total_score: I32 = 0
+
+fn main():
+    file := File.Open("rock_paper_scissors.txt")
+
+    lines := file.get_lines()
+
+    foreach line in lines:
+        my_hand := line[0]
+        their_hand := line[2]
+
+        new_rps_score := rps_score(my_hand)
+        new_outcome_score := outcome_score(my_hand, their_hand)
+
+        total_score = +(total_score, new_rps_score)
+        total_score = +(total_score, new_outcome_score)
+
+    display("Total Score is {total_score}")
+
+fn rps_score(my_hand: char) -> (score: I32):
+    if my_hand:
+        is 'A':
+            return rock
+        is 'B':
+            return paper
+        is 'C':
+            return scissors
+
+fn outcome_score(my_hand: char, their_hand: char) -> (score: I32):
+    if my_hand is 'A':       #rock
+        if their_hand is 'X':   #rock
+            return tie
+        if their_hand is 'Y':   #paper
+            return lose
+        if their_hand is 'Z':   #scissors
+            return win
+    if my_hand is 'B':      #paper
+        if their_hand is 'X':   #rock
+            return win
+        if their_hand is 'Y':   #paper
+            return tie
+        if their_hand is 'Z':   #scissors
+            return lose
+    if my_hand is 'C':      #scissors
+        if their_hand is 'X':   #rock
+            return lose
+        if their_hand is 'Y':   #paper
+            return win
+        if their_hand is 'Z':   #scissors
+            return tie
+
