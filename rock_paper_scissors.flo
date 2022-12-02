@@ -50,13 +50,12 @@ fn main() -> Error:
     display("Total Score is {total_score}")
 
 fn rps_score(my_hand: char) -> (score: I32):
-    if my_hand:
-        is my_rock:
-            return rock
-        is my_paper:
-            return paper
-        is my_scissors:
-            return scissors
+    if my_hand is my_rock:
+        return rock
+    if my_hand is my_paper:
+        return paper
+    if my_hand is my_scissors:
+        return scissors
 
 fn outcome_score(my_hand: char, their_hand: char) -> (score: I32):
     if my_hand:
@@ -69,7 +68,7 @@ fn outcome_score(my_hand: char, their_hand: char) -> (score: I32):
                 is their_scissors:
                     return win
         is my_paper:
-            if their_hand is their_rock:     #This way is not as fast, we should optimize so it works as above but it's easy to read
+            if their_hand is their_rock:     #This way is not as fast(handled as if statements not switch case), we should optimize so it in the future but it's easier to read
                 return win
             if their_hand is their_paper:
                 return tie
