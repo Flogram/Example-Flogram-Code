@@ -1,6 +1,8 @@
 # This code is the solution for:
 # https://adventofcode.com/2022/day/2
 
+import "Base.File"
+
 # On left(their hand):
 their_rock := 'A'
 their_paper := 'B'
@@ -12,20 +14,10 @@ my_paper := 'Y'
 my_scissors := 'Z'
 
 # score for each round:
-# 1 if X
-# 2 if Y
-# 3 if Z
-# PLUS
-# 0 if you lost
-# 3 if you tied
-# 6 if you won
-
-import "Base.File"
-
 rock: I32 = 1
 paper: I32 = 2
 scissor: I32 = 3
-
+# PLUS
 lose: I32 = 0
 tie: I32 = 3
 win: I32 = 6
