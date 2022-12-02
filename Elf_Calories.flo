@@ -4,7 +4,7 @@
 import "Base.File"   # Maybe std instead of Base?
 
 fn main():
-    file := File.Open("elf_calories.txt")
+    file := File.Open("elf_calories.txt")   # returns a File object
 
     # Note the type of lines could be made explicit as such:
     # lines: string[] = file.get_lines()
@@ -16,16 +16,13 @@ fn main():
 
     foreach line in lines:
         cur_calories := int32(line) # int32() returns int32 or Error if conversion unsuccessful
-        # we've debated this as an alternative to the above:
-        #   cur_calories: int32 = {line}
-        #   anything in {} will be automatically converted to the right type of what is on the left, could be nice for function calls
-        # Thoughts?
+
+        # must be a new line causing an error
         if cur_calories is Error:
             if cur_sum > max_calories:
                 max_calories = cur_sum
             cur_sum = 0
         else:
             cur_sum = +(cur_sum, cur_calories)
-
 
     display(max_calories)
