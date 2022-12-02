@@ -2,14 +2,14 @@
 # https://adventofcode.com/2022/day/2
 
 # On left(their hand):
-# A = Rock
-# B = Paper
-# C = Scissors
+their_rock := 'A'
+their_paper := 'B'
+their_scissors := 'C'
 
-# On right(your hand):
-# X = Rock
-# Y = Paper
-# Z = Scissors
+# On right(my hand):
+my_rock := 'X'
+my_paper := 'Y'
+my_scissors := 'Z'
 
 # score for each round:
 # 1 if X
@@ -32,14 +32,14 @@ win: I32 = 6
 
 mut total_score: I32 = 0
 
-fn main():
+fn main() -> Error:
     file := File.Open("rock_paper_scissors.txt")
 
     lines := file.get_lines()
 
     foreach line in lines:
-        my_hand := line[0]
-        their_hand := line[2]
+        throw my_hand := int32(line[0])
+        throw their_hand := int32(line[2])
 
         new_rps_score := rps_score(my_hand)
         new_outcome_score := outcome_score(my_hand, their_hand)
@@ -51,33 +51,35 @@ fn main():
 
 fn rps_score(my_hand: char) -> (score: I32):
     if my_hand:
-        is 'A':
+        is my_rock:
             return rock
-        is 'B':
+        is my_paper:
             return paper
-        is 'C':
+        is my_scissors:
             return scissors
 
 fn outcome_score(my_hand: char, their_hand: char) -> (score: I32):
-    if my_hand is 'A':       #rock
-        if their_hand is 'X':   #rock
-            return tie
-        if their_hand is 'Y':   #paper
-            return lose
-        if their_hand is 'Z':   #scissors
-            return win
-    if my_hand is 'B':      #paper
-        if their_hand is 'X':   #rock
-            return win
-        if their_hand is 'Y':   #paper
-            return tie
-        if their_hand is 'Z':   #scissors
-            return lose
-    if my_hand is 'C':      #scissors
-        if their_hand is 'X':   #rock
-            return lose
-        if their_hand is 'Y':   #paper
-            return win
-        if their_hand is 'Z':   #scissors
-            return tie
+    if my_hand:
+        is my_rock:
+            if their_hand:
+                is their_rock:
+                    return tie
+                is their_paper:
+                    return lose
+                is their_scissors:
+                    return win
+        is my_paper:
+            if their_hand is their_rock:     #This way is not as fast, we should optimize so it works as above but it's easy to read
+                return win
+            if their_hand is their_paper:
+                return tie
+            if their_hand is their_scissors:
+                return lose
+        is my_scissors:
+            if their_hand is their_rock:
+                return lose
+            if their_hand is their_paper:
+                return win
+            if their_hand is their_scissors:
+                return tie
 
