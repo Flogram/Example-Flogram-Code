@@ -1,3 +1,6 @@
+# This file is the solution to this program:
+# https://adventofcode.com/2022/day/1
+
 import "Base.File"   # Maybe std instead of Base?
 
 fn main():
