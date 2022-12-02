@@ -11,8 +11,8 @@ fn main():
     # Otherwise type inference is used
     lines := file.get_lines()
 
-    max_calories: int32 = 0
-    cur_sum : int32 = 0
+    mut max_calories: int32 = 0
+    mut cur_sum : int32 = 0
 
     foreach line in lines:
         cur_calories := int32(line) # int32() returns int32 or Error if conversion unsuccessful
