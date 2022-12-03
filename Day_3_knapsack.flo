@@ -1,0 +1,27 @@
+
+a: I32 = ascii__to_int('a')
+A: I32 = ascii__to_int('A')
+
+
+
+import "Core.File"
+
+fn main():
+    file := File.Open("rucksacks.txt")
+
+	lines := file.get_lines()
+
+    mut total_score: I32 = 0
+
+	foreach line in lines:
+		rucksack_size := line.size() / 2
+
+        mut left_rucksack := new Map{char, int32}()
+
+		for i from 0 almost_to rucksack_size:
+            for j from rucksack_size almost_to line.size():
+                if line[i] == line[j]:   #we found the matching item!
+                    score_item := calc_score(line[i])
+                    total_score = +(total_score, )
+
+
