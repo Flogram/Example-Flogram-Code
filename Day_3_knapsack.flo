@@ -1,8 +1,6 @@
 
-a: I32 = ascii__to_int('a')
-A: I32 = ascii__to_int('A')
-
-
+a: I32 = ascii_value('a')
+A: I32 = ascii_value('A')
 
 import "Core.File"
 
@@ -16,12 +14,15 @@ fn main():
 	foreach line in lines:
 		rucksack_size := line.size() / 2
 
-        mut left_rucksack := new Map{char, int32}()
-
 		for i from 0 almost_to rucksack_size:
             for j from rucksack_size almost_to line.size():
                 if line[i] == line[j]:   #we found the matching item!
                     score_item := calc_score(line[i])
-                    total_score = +(total_score, )
+                    total_score = +(total_score, score_item)
 
-
+fn calc_score(c: char) -> int32:
+    char_val := ascii_value(c)
+    if char_val >= a:
+        return c - a
+    else:
+        return c - A
