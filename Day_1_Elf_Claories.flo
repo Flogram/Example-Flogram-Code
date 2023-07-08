@@ -3,19 +3,19 @@
 
 import "Base.File"   # Maybe std instead of Base?
 
-fn main():
-    file := File.Open("elf_calories.txt")   # returns a File object
+fn main() throws:
+    file := File("elf_calories.txt")   # returns a File object
 
     # Note the type of lines could be made explicit as such:
     # lines: string[] = file.get_lines()
     # Otherwise type inference is used
     lines := file.get_lines()
 
-    mut max_calories: int32 = 0
-    mut cur_sum : int32 = 0
+    mut max_calories: I32 = 0
+    mut cur_sum : I32 = 0
 
     foreach line in lines:
-        cur_calories := int32(line) # int32() returns int32 or Error if conversion unsuccessful
+        cur_calories := I32(line) throws # I32() returns I32 or throws Error if conversion unsuccessful
 
         # must be a new line causing an error
         if cur_calories is Error:
