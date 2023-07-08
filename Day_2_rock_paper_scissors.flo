@@ -25,13 +25,13 @@ win: I32 = 6
 mut total_score: I32 = 0
 
 fn main() -> Error:
-    file := File.Open("rock_paper_scissors.txt")
+    file := File("rock_paper_scissors.txt")
 
     lines := file.get_lines()
 
     foreach line in lines:
-        throw my_hand := int32(line[0])
-        throw their_hand := int32(line[2])
+        throw my_hand := I32(line[0])
+        throw their_hand := I32(line[2])
 
         new_rps_score := rps_score(my_hand)
         new_outcome_score := outcome_score(my_hand, their_hand)
