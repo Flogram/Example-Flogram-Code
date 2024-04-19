@@ -1,0 +1,10 @@
+object Point:
+  x: FP32
+  y: FP32
+
+object Arrow:
+  a: Point
+  b: Point
+
+fn identity(a: Arrow) -> (a: Arrow):
+  return a

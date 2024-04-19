@@ -1,0 +1,2 @@
+fn identity(start: I32, len: I32) -> (start: I32, len: I32):
+  return start, len

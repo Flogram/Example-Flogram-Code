@@ -1,0 +1,5 @@
+fn test () -> (c: Maybe{I32}):
+  int := 20
+  d := Maybe{I32}.NONE
+  y := Maybe{I32}.SOME(int)
+  return y

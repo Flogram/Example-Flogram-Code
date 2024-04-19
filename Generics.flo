@@ -1,0 +1,6 @@
+fn generic {T1}(a: T1) -> (b: T1):
+  return *(a,a)
+
+fn main (num: I32) -> (result: I32):
+  productI32 := generic{I32}(num)
+  return productI32

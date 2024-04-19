@@ -1,0 +1,18 @@
+export:
+    enum State:
+        DONE
+        DELETED
+        ON_CASE
+    nocopy object Point{T1}:
+        x: T1
+        y: T1
+        fn getX () -> (x: T1):
+            return self.x
+        fn getY () -> (y: T1):
+            return self.y
+
+    fn use () -> ():
+        a: I32 = 10
+
+export fn main():
+    z := 26

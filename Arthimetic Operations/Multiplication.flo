@@ -1,0 +1,3 @@
+fn multiply(a: I16, b: I16) -> (c: I16):
+  product: I16 = *(a, b)
+  return product

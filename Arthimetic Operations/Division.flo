@@ -1,0 +1,3 @@
+fn divide(a: U32, b: U32) -> (c: U32):
+  quotient : U32 = /(a, b)
+  return quotient

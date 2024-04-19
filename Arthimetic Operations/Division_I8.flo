@@ -1,0 +1,3 @@
+fn divide(a: I8, b: I8) -> (c: I8):
+  quotient : I8 = /(a, b)
+  return quotient

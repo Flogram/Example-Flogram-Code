@@ -1,0 +1,4 @@
+import @/Point.flo
+fn main():
+    x := Point(x = 11.4, y = 20.7)
+    y : Point = Point(x = 11.4, y = 20.7)

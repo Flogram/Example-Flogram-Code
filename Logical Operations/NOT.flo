@@ -1,0 +1,4 @@
+fn inverse(a: Bool) -> (c: Bool):
+  other_value: Bool = TRUE
+  not_equal: Bool = not(other_value)
+  return not_equal

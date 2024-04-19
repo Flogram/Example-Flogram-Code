@@ -1,0 +1,3 @@
+fn add(a: FP64, b: FP64) -> (c: FP64):
+  sum: FP64 = +(a, b)
+  return sum

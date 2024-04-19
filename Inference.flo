@@ -1,0 +1,5 @@
+fn infer_literal(c: I32) -> ():
+    a := 5
+    PI := 3.14
+    sum := +(20, 19)
+    return

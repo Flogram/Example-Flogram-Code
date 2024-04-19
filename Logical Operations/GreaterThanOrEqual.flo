@@ -1,0 +1,3 @@
+fn compare(a: FP32, b: FP32) -> (c: Bool):
+  gte: Bool = >=(a, b)
+  return gte

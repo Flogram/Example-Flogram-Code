@@ -1,0 +1,3 @@
+fn modulate(a: U64, b: U64) -> (c: U64):
+  reminder: U64 = %(a, b)
+  return reminder

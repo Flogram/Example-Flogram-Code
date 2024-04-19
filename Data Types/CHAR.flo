@@ -1,0 +1,3 @@
+fn test(a: Char) -> (c: Char):
+  name: Char = 'v'
+  return name

@@ -1,0 +1,7 @@
+export object Point:
+    x: FP32
+    y: FP32
+    fn getX () -> (x: FP32):
+        return self.x
+    fn getY () -> (y: FP32):
+        return self.y

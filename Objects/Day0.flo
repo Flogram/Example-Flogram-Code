@@ -1,0 +1,6 @@
+object Point:
+  x: FP32
+  y: FP32
+
+fn identity(a: Point) -> (a: Point):
+  return a

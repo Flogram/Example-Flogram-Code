@@ -1,0 +1,10 @@
+enum Status:
+  DELIVERED
+  PENDING
+  RECEIVED
+  CANCELLED
+
+fn test () -> (c: Status):
+  a := CANCELLED
+  b := Status.PENDING
+  return a

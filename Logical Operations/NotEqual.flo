@@ -1,0 +1,3 @@
+fn compare(a: I64, b: I64) -> (c: Bool):
+  not_equal: Bool = !=(a, b)
+  return not_equal

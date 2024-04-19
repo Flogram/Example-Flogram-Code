@@ -1,0 +1,3 @@
+fn compare(a: Bool, b: Bool) -> (c: Bool):
+  result: Bool = (a and b)
+  return result

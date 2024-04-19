@@ -1,0 +1,25 @@
+enum Boolean:
+  FALSE
+  TRUE
+
+fn not(a: Boolean) -> (b: Boolean):
+  if a is FALSE:
+    return TRUE
+  return FALSE
+
+
+
+fn and(a: Boolean, b: Boolean) -> (c: Boolean):
+  if a, b is TRUE, TRUE:
+    return TRUE
+  return FALSE
+
+fn or(a: Boolean, b: Boolean) -> (c: Boolean):
+  if a, b is FALSE, FALSE:
+    return FALSE
+  return TRUE
+
+fn xor(a: Boolean, b: Boolean) -> (c: Boolean):
+  if a is b:
+    return FALSE
+  return TRUE

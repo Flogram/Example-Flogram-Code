@@ -1,0 +1,4 @@
+fn test () -> (c: I32):
+  int := 20
+  moved := move(int)
+  return moved
