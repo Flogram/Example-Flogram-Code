@@ -4,13 +4,14 @@ Flogram is the first programming language designed to be written by AI. We have 
 
 ## Getting Started
 
-To get started with Flogram, visit the official [Flogram website](https://flogram.dev/) for instructions, tutorials and documentation.
+To get started with Flogram, visit the official [Flogram website](https://flogram.dev/) for instructions, tutorials, and documentation.
 
 ## Examples
 
 This repository contains various examples that showcase the capabilities and syntax of Flogram:
 
 - Arithmetic Operations
+- Arrays
 - Builtin Functions
 - Casting
 - Data Types
@@ -18,6 +19,9 @@ This repository contains various examples that showcase the capabilities and syn
 - Import-Export
 - Logical Operations
 - Objects
+- Features
+- Strings
+- Loops
 
 ... and more.
 
@@ -33,6 +37,6 @@ This project is licensed under the [GNU General Public License v3.0](LICENSE) - 
 
 ## Support
 
-If you need help or have questions, please visit our [support page](https://flogram.dev/support) or join our community chat.
+If you need help or have questions, please refer to our [tutorials](https://flogram.dev/tutorials) or join our [community chat](https://discord.gg/rYzWK6497a).
 
 Thank you for exploring Flogram. We're excited to see what you build with it!
