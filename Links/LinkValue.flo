@@ -1,0 +1,3 @@
+fn load(linkNumber: Link { FP32, constant }) -> (number: FP32):
+  number : FP32 = at(linkNumber)
+  return number

@@ -1,0 +1,8 @@
+object Point:
+  x: FP32
+  y: I32
+
+fn identity(a: I32) -> (result: I32):
+  mut point := Point(x = 3.5 , y = 5)
+  point.y = a
+  return point.y

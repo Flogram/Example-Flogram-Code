@@ -1,0 +1,7 @@
+object Point:
+  x: I32
+  y: I32
+
+fn compare (a: Point, b: Point)-> (c: Bool):
+  result: Bool  = !=(a,b)
+  return result

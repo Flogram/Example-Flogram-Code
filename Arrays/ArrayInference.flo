@@ -1,0 +1,5 @@
+fn main() -> (c: Array { I32 } ):
+  array: Array { I32 } ( size = 4 ) = Array{I32}(size = 4, [10, 11, 12, 13])
+  array2: Array { I32 } ( size = 4 ) = Array{I32}(size = 4, [])
+  array3: Array { I32 } ( size = 4 ) = Array{I32}(size = 4)
+  return array3

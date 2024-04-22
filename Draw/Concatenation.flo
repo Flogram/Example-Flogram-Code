@@ -1,0 +1,5 @@
+fn main()->():
+  greeting := "Hello"
+  name := "Doe"
+  draw(greeting, ", my name is: ", name)
+  draw([10, 20, 50])

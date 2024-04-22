@@ -1,0 +1,3 @@
+fn main(a: I32, b:I32) -> (c: I32):
+    c := (a + b)
+    return c

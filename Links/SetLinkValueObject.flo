@@ -1,0 +1,7 @@
+object Point:
+  x: FP32
+  y: FP32
+
+fn store(point: Point, mut linkPoint: Link!! {Point}) -> ():
+  at(linkPoint) = point
+  return

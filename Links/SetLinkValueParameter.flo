@@ -1,0 +1,3 @@
+fn load(number: I32) -> (address: Link { I32, heap }):
+  a : Link { I32 } = Link(number)
+  return a

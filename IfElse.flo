@@ -1,0 +1,15 @@
+object Point2D:
+  mut x: FP32
+  mut y: FP32
+  z: FP32 = 20
+
+fn smallNumber(p2d: Point2D) -> (result: FP32):
+  # p2d := Point2D(x = 10, y = 14)
+  mut value := p2d.x
+  if <(p2d.x, p2d.y):
+    value = p2d.x
+    draw(p2d.x)
+  else:
+    value = p2d.y
+    draw(p2d.y)
+  return value

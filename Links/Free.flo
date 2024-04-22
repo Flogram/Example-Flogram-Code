@@ -1,0 +1,11 @@
+object Person:
+  id: U32
+  age: U32
+  link: Link!!{I32}
+fn main() -> (result: Person):
+  a: U32 = 20
+  person := Person(id = 101, age =  25, link = Link!!(40))
+  link := Link!!(a)
+  free!!(link)
+  free!!(person.link)
+  return person

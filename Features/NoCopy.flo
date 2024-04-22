@@ -1,0 +1,9 @@
+nocopy object Point:
+  x: FP32
+  y: I32
+
+fn identity() -> (c: String):
+  a : String = "Hello, World"
+  b := a
+  c := Point( x = 20, y = 11 )
+  return b

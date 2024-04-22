@@ -1,0 +1,11 @@
+object Point:
+  x: FP32
+  y: FP32
+
+fn extractX(a: Point) -> (x: FP32):
+  x : FP32 = a.x
+  return x
+
+fn extractY(a: Point) -> (y: FP32):
+  y : FP32 = a.y
+  return y

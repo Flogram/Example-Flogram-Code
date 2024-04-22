@@ -1,0 +1,5 @@
+fn identity() -> (c: Link { U32, constant }):
+  a: U32  = 20
+  link := Link!!(a)
+  b := link
+  return b

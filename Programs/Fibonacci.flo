@@ -1,0 +1,12 @@
+fn fibonacci(n: I32) -> (f: I32):
+  mut a: I32 = 0
+  mut b: I32 = 1
+  mut i: I32 = 0
+  loop:
+    temp: I32 = a
+    if >=(i,n):
+      break
+    a = b
+    b = +(temp,b)
+    i = +(i, 1)
+  return a

@@ -1,0 +1,5 @@
+
+fn indexValue(mut a: Array { I32 }, index: I32, b: I32) -> ():
+  a[index]  = b
+  a[4]  = b
+  return

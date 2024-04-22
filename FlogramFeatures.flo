@@ -1,0 +1,9 @@
+fn ShouldYouPickFlogram(allInOne: Bool, bugMinimizing : Bool, highPerformance : Bool):  
+
+    lookingForFlogramFeatures := ((allInOne and bugMinimizing) and highPerformance)
+  
+    if lookingForFlogramFeatures:
+        draw("Flogram is the language for you!")
+  
+fn main() -> ():
+    ShouldYouPickFlogram(TRUE,TRUE,TRUE)

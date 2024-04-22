@@ -1,0 +1,3 @@
+fn stringLiteral(a: String) -> (c: String):
+  text: String = "Hello World"
+  return text

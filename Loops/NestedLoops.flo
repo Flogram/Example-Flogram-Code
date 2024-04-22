@@ -1,0 +1,9 @@
+fn main():
+    mut a := 1
+    nums := [100, 200, 300, 400, 500]
+    while <=(a, 10):
+        draw("This is round number ", a)
+        foreach num at j in nums:
+            draw("The number at index ", j, ", is ", num)
+            draw(num)
+        a = +(a, 1)

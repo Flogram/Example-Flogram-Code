@@ -1,0 +1,32 @@
+object Point:
+  x: FP32
+  y: FP32
+
+object Circle:
+  radius: FP32
+  point: Point
+
+  fn constructor(a: FP32) -> ():
+    self.radius = a
+    self.point = Point(x = 3.5, y = 11.6)
+
+  # Note: self.radius equals radius that belongs to the object
+  fn getRadius() -> (radius: FP32):
+    return self.radius
+
+  # radius is the parameter that's passed in
+  fn setRadius(radius: FP32) -> ():
+    self.radius = radius
+
+  fn calculateArea() -> (result: FP32):
+    area: FP32 = *(*(self.radius,self.radius), 3.14)
+    return area
+
+fn main(paramRadius: FP32) -> (area: FP32, radius: FP32):
+  a:= Circle(7)
+
+  a.setRadius(paramRadius)
+  area := a.calculateArea()
+  radius := a.getRadius()
+
+  return area, radius

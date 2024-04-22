@@ -1,0 +1,3 @@
+fn store(number: FP32, mut linkNumber: Link!! { FP32, heap }) -> ():
+  at(linkNumber) = number
+  return

@@ -1,0 +1,7 @@
+object Point:
+  x: FP32
+  y: FP32
+
+fn load(linkPoint: Link { Point, constant }) -> (point: Point):
+  point : Point = at(linkPoint)
+  return point

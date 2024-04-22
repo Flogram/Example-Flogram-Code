@@ -1,0 +1,16 @@
+object Point:
+  a: I8
+fn squared(mut x: I8) -> (product: I8):
+  product := *(x,x)
+  return product
+
+fn add(mut a: I8, mut b: I8) -> (result: I8):
+  c := Point(a = 10)
+  mut difference := -(c.a, b)
+  mut param : I8 = 10
+  value := squared(param)
+  return value
+
+fn example(a:I32) -> (result: I32):
+  random: I32 = 10
+  return random

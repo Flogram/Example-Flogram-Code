@@ -1,10 +1,11 @@
 object Point:
-  x: FP32
-  y: FP32
+  x: I32
+  y: I32
 
 object Arrow:
   a: Point
   b: Point
 
-fn identity(a: Arrow) -> (a: Arrow):
-  return a
+fn identity() -> (result: Arrow):
+  arrow: Arrow = Arrow ( a = Point( x = 41, y = 5 ), b = Point( x = 113, y = 10 ) )
+  return arrow
