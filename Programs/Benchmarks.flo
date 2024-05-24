@@ -6,13 +6,13 @@ fn addition()->(sum: I32):
         current = +(current, 1)
     return sum
 
-fn indexing() -> (arr: Array { I32 }):
-    arr: Array { I32 } ( size = 1000000 ) = [4, 5, 67]
+fn indexing() -> (arr: [I32]):
+    arr: [I32] = [4, 5, 67]( capacity = 1000000 )
     foreach element at index in arr:
         arr[index] = *(index, index)
     return arr
 
-fn sort() -> (arr: Array {I32}):
+fn sort() -> (arr: [I32]):
     arr := indexing()
     mut i := 1
     mut n := 1000000
@@ -63,8 +63,8 @@ object Person:
     name: String
     age: I32
 
-fn complex_idx() -> (arr: Array { Person }):
-    arr: Array { Person } ( size = 1000000 ) = []
+fn complex_idx() -> (arr: [Person]):
+    arr: [Person] = []( capacity = 1000000 )
     foreach element at index in arr:
         arr[index] = Person(name="John", age=20)
     return arr

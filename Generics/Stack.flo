@@ -1,0 +1,49 @@
+object Stack{T}:
+    elements: [T]
+    size: I32
+    capacity: I32
+
+    fn constructor(capacity: I32):
+        self.capacity = capacity
+        #cannot infer an empty array
+        self.elements: [T] = [](capacity=capacity)
+        self.size = 0
+
+    fn push(item: T):
+        if self.size == self.capacity:
+            #we have not talked about errors yet....
+            return
+        self.elements[self.size] = item
+        self.size = self.size + 1
+
+    fn pop() -> (item: T):
+        if self.size == 0:
+            #we have not talked about errors yet...
+            return
+        self.size = self.size - 1
+        return self.elements[self.size]
+
+    fn peek() -> (item: T):
+        if self.size == 0:
+            #error
+            return 0
+        return self.elements[self.size - 1]
+
+    fn isEmpty() -> (empty: Bool):
+        return self.size == 0
+
+    fn getSize() -> (size: I32):
+        return self.size
+
+fn main():
+    stack := Stack{I32}(capacity = 5)
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
+
+    draw("Stack size: ", stack.getSize())  # 3
+    draw("Top element: ", stack.peek())    # 3
+    draw("Popped element: ", stack.pop())  # 3
+
+    draw("Stack size after pop: ", stack.getSize()) # 2
+    draw("Is stack empty?: ", stack.isEmpty()) # False

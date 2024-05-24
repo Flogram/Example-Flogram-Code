@@ -1,0 +1,7 @@
+enum Message: 
+    Text(message: String) 
+    Image(url: String, height: I32, width: I32) 
+    Video(name: String, quality: FP32) 
+    File(file_name: String, size: I32)
+    Audio(name: String, size:I32, time:I32)
+    Location(name: String, lat: I32, lon: I32)

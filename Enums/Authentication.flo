@@ -1,0 +1,3 @@
+enum Authentication:
+  SERVER(email: String, hash: String, salt: String)
+  TOKEN(string: String)

@@ -14,7 +14,7 @@ fn link_to_expression(a: I32, b: I32) -> (result: I32):
   sum : Link { I32 } = +(Link!!(a), Link!!(b))
   return sum
 
-fn index_value_expression(array: Array{I32}) -> (result: I32):
-  a: Array{I32}(size = 3) = [10, 40, 60]
+fn index_value_expression(array: [I32]) -> (result: I32):
+  a: [I32] = [10, 40, 60](capacity = 3)
   add := +(a[1], a[2])
   return add

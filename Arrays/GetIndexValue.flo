@@ -1,4 +1,4 @@
-fn indexValue(a: Array { I32 }, index: I32) -> (c: I32 ):
+fn indexValue(a: [I32], index: I32) -> (c: I32):
   result: I32  = a[index]
   m: I32 = a[2]
   return result

@@ -1,4 +1,4 @@
-fn sort(array: Array { I32 }, length: I32) -> (c: Array { I32 } ):
+fn sort(array: [I32], length: I32) -> (c: [I32]):
   mut index := 0
 
   loop:

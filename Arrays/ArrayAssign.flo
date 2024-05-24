@@ -1,5 +1,5 @@
-fn array(a: Array { I32 }) -> (c: Array { I32 } ):
-  b: Array { I32 } ( size = 4 ) = a
+fn array(a: [I32]) -> (c: [I32] ):
+  b: [I32] = a
   result := b
   return result
 

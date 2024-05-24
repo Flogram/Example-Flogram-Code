@@ -1,4 +1,4 @@
-fn main(a: String, b: Array{I32}):
+fn main(a: String, b: [I32]):
   text: String = "Hello World"
   points := [[10, 5], [7, 34], [4, 9], [22, 23], [34, 67]]
   words := ["apple", "mango", "strawbelly", "orange"]

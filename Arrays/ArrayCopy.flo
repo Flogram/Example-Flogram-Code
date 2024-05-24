@@ -1,4 +1,4 @@
-fn identity() -> (c: Array { FP32 }):
-  a : Array { FP32 }(size = 5) = [20, 70, 33, 44, 100]
+fn identity() -> (c: [FP32]):
+  a : [FP32] = [20, 70, 33, 44, 100](capacity = 5)
   b := a
   return b

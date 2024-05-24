@@ -1,8 +1,8 @@
 object Point:
   x: FP32
   y: I32
-  z: Array{ FP32 }( size = 5 )
+  z: [FP32]
 
-fn identity(a: Array { FP32 }) -> (result: Point):
+fn identity(a: [FP32]) -> (result: Point):
   point: Point = Point(x = 3.5, y = 11,  z = [100, 134, 453, 43, 11])
   return point

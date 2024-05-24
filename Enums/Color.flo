@@ -1,0 +1,28 @@
+enum Color:
+    Red
+    Green
+    Blue
+    RGB(r: U8, g: U8, b: U8)
+
+fn main():
+    # Create instances of the `Color` enum
+    red := Color.Red
+    green := Color.Green
+    blue := Color.Blue
+    custom_color := Color.RGB(128, 0, 255)
+
+    # Use a match expression to unwrap the enum values
+    when red:
+        is Red: 
+          draw("It's red!")
+        is Green:
+          draw("It's green!")
+        is Blue:
+          draw("It's blue!")
+        is RGB:
+          draw("Custom RGB color: ({red.r}, {red.g}, {red.b})")
+
+    # Unwrap the `RGB` variant using `if let`
+    when custom_color:
+      is Color.RGB:
+        draw("Custom RGB color: ({custom_color.r}, {custom_color.g}, {custom_color.b})")
