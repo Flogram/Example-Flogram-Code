@@ -7,7 +7,7 @@ fn addition()->(sum: I32):
     return sum
 
 fn indexing() -> (arr: [I32]):
-    arr: [I32] = [4, 5, 67]( capacity = 1000000 )
+    arr: [I32] = [4, 5, 67](capacity = 1000000)
     foreach element at index in arr:
         arr[index] = *(index, index)
     return arr
@@ -64,7 +64,7 @@ object Person:
     age: I32
 
 fn complex_idx() -> (arr: [Person]):
-    arr: [Person] = []( capacity = 1000000 )
+    arr: [Person] = [](capacity = 100000)
     foreach element at index in arr:
         arr[index] = Person(name="John", age=20)
     return arr
